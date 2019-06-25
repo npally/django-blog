@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="content container">
+  <div class="row">
+    <div class="col-md-8">
+      <div class="post">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.date }}</p>
+        <p>{{ post.body|linebreaksbr }}</p>
+        <p>by {{ post.author }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

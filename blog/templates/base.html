@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    <meta charset="utf-8">
+    <title>
+      {% if title %}
+        {{ title }}
+      {% else %}
+        My Blog
+      {% endif %}
+    </title>
+  </head>
+  <body>
+    <div class="page-header">
+      <h1><a href="{% url 'index' %}">kilgore trout's blog</a></h1>
+    </div>
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      <footer>
+        &copy; Copyright 2019 by <a href="https://www.nicholaspally.com" target="_blank">me</a>
+      </footer>
+    </div>
+  </body>
+</html>
